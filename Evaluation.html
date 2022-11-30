@@ -68,7 +68,7 @@
 				</li>
 
 				<li class="nav-item">
-					<a class="nav-link px-4 py-1 mb-1 active"
+					<a class="nav-link px-4 py-1 mb-1 "
 					   href="https://mgh-3dqi.github.io/Datasetoverview">
 							<i class="fas fa-fw" title="Page is only visible by participants of this challenge"></i>
 						Datasets Overview
@@ -84,7 +84,7 @@
 				</li>
 				
 				<li class="nav-item">
-					<a class="nav-link px-4 py-1 mb-1 "
+					<a class="nav-link px-4 py-1 mb-1 active"
 					   href="https://mgh-3dqi.github.io/Evaluation">
 							<i class="fa fa-fw"></i>
 						Evaluation & Ranking
@@ -113,10 +113,18 @@
 			<div class="mx-3">
 				<div id=pageContainer><h2 class="" style="text-align: center;">WBMRI-NF 2023: Neurofibromatosis Tumor Segmentation in Whole-body MRI Challenge</h2><p style="text-align: center;"><img src="https://mgh-3dqi.github.io/logo-3.png" style="width: 25%;"><br></p>
 			
-					<h4 class="">Datasets Overview</h4>
-					<p style="text-align: justify;"><span style="">We will provide 400 WBMRI scans (>2400 NF tumors) collected from our clinical working protocol of NF volumetric quantification in WBMRI, each with radiologist-confirmed segmentation masks and volumetric tumor-burden reports. The dataset will be split into 200 for training, 50 for open validation, and 150 for the closed testing. </span>
+					<h4 class="">Evaluation & Ranking</h4>
+					<p style="text-align: justify;"><span style="">The model performance will be evaluated in terms of segmentation masks and volumetric tumor volume of closed test dataset. Both detection and segmentation metrics will be used to assess a model: 
+Three detection metrics: Balanced accuracy, F1-Score, and Area under curve (AUC), will be used to assess the detection performance. 
+Two segmentation metrics: Dice Similarity Coefficient (DSC), and normalized surface dice (NSD), will be used to assess the segmentation performance. </span>
 					</p>
-					<p style="text-align: justify;"><span style="">Each WBMRI scan was acquired using a 1.5 Tesla MR scanner (Siemens Medical Systems, Malvern, PA), integrated body coil, and no intravenous contrast. Each subject was imaged from head to ankles in the supine position. The entire body was imaged using a coronal fat suppressed fluid sensitive sequence (STIR). The image sizes vary between 320X1000X20 and 400X1600X40. Each scan is saved in a single file (.nii) in NIFTI format, which is converted from de-identified DICOM files. </span>
+					<p style="text-align: justify;"><span style="">Only the last run of the submitted Docker container is officially counted to rank challenge results.
+Overall Ranking:
+Rank average score of detection and segmentation, unsubmitted tasks would be calculated as 0.
+Using bootstrapping and Bayes factor calculation to determine ties.
+Wilcoxon signed-rank test will be used to confirm the final ranking.
+Detection Model Performance will be ranked in terms of the Balanced accuracy, F1-score, and AUC.
+Segmentation Model Performance will be ranked in terms of the DSC and NSD. </span>
 					</p>
 				</div>
 			</div>
