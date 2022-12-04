@@ -106,6 +106,14 @@
 						Challenge Schedule
 					</a>
 				</li>
+				
+				<li class="nav-item">
+					<a class="nav-link px-4 py-1 mb-1 "
+					   href="https://mgh-3dqi.github.io/schedule">
+							<i class="fa fa-fw"></i>
+						Challenge Registration
+					</a>
+				</li>
 			</ul>
 		</div>
 
@@ -114,17 +122,21 @@
 				<div id=pageContainer><h2 class="" style="text-align: center;">WBMRI-NF 2023: Neurofibromatosis Tumor Segmentation in Whole-body MRI Challenge</h2><p style="text-align: center;"><img src="https://mgh-3dqi.github.io/logo-3.png" style="width: 25%;"><br></p>
 			
 					<h4 class="">Evaluation & Ranking</h4>
-					<p style="text-align: justify;"><span style="">The model performance will be evaluated in terms of segmentation masks and volumetric tumor volume of closed test dataset. Both detection and segmentation metrics will be used to assess a model: 
-Three detection metrics: Balanced accuracy, F1-Score, and Area under curve (AUC), will be used to assess the detection performance. 
-Two segmentation metrics: Dice Similarity Coefficient (DSC), and normalized surface dice (NSD), will be used to assess the segmentation performance. </span>
+					<p style="text-align: justify;"><span style="">The model performance will be evaluated in terms of segmentation masks and volumetric tumor volume of closed test dataset. Both detection and segmentation metrics will be used to assess a model:</span>
 					</p>
-					<p style="text-align: justify;"><span style="">Only the last run of the submitted Docker container is officially counted to rank challenge results.
-Overall Ranking:
-Rank average score of detection and segmentation, unsubmitted tasks would be calculated as 0.
-Using bootstrapping and Bayes factor calculation to determine ties.
-Wilcoxon signed-rank test will be used to confirm the final ranking.
-Detection Model Performance will be ranked in terms of the Balanced accuracy, F1-score, and AUC.
-Segmentation Model Performance will be ranked in terms of the DSC and NSD. </span>
+					<p style="text-align: justify;"><span style="">Detection metrics: Balanced accuracy, F1-Score, and Area under curve (AUC), will be used to assess the detection performance. A detection of a tumor is defined if the segmentation mask covers more than 50% of the tumor mask.</span>
+					</p>
+					<p style="text-align: justify;"><span style="">Segmentation metrics: Dice Similarity Coefficient (DSC), and normalized surface dice (NSD), will be used to assess the segmentation performance. </span>
+					</p>
+					<p style="text-align: justify;"><span style="">Only the last run of the submitted Docker container is officially counted to rank challenge results. </span>
+					</p>
+					<p style="text-align: justify;"><span style="">Overall Ranking:
+1) Rank average score of detection and segmentation performance.
+2) Using bootstrapping and Bayes factor calculation to determine ties.
+3) Wilcoxon signed-rank test will be used to confirm the final ranking. </span>
+					</p>
+					<p style="text-align: justify;"><span style="">Detection Performance will be ranked in terms of the detection metrics. Segmentation Performance will be ranked in terms of the segmentation metrics.
+ </span>
 					</p>
 				</div>
 			</div>
